@@ -1,0 +1,70 @@
+nav ul li a, nav i, nav a.brand-logo, 
+.sidenav li a, .sidenav li a i.material-icons, 
+a {
+    color: #ff3d00;
+}
+/* nav ul a:hover {
+    color: #01579b;
+    transition: all 0.3s;
+} */
+.preloader-background {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #eee;
+	position: absolute;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.preloader-background p {
+    padding-top: 120px;
+    margin-left: -60px;
+    opacity: 0.8;
+}
+.blinking {
+	animation: blinker 0.5s linear infinite;
+}
+@keyframes blinker {  
+  50% { opacity: 0; }
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+main {
+    /* position: relative; */
+    flex: 1 0 auto;
+}
+.thumb-up, .thumb-down {
+    position: relative;
+}
+.thumb-up > .badge, .thumb-down > .badge {
+    position: absolute;
+    left: 0;
+}
+.video-block {
+    position: relative;
+}
+.video-block::before {
+    content: "";
+    display: block;
+    padding-top: 56%;
+}
+.video-block > video {
+    background-color: #eee;
+    height: 100%;
+    border: none;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
